@@ -1,26 +1,61 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
+Route::get('/', 'indexController@index');
 
-Route::get('/', function()
-{
-	return View::make('index');
-});
-Route::get('me', function()
-{
-	return "I'm Batman.";
-});
+Route::get('/login2', 'indexController@login');
 
-Route::get('login2', function()
-{
-	return View::make('login2');
-});
+Route::post('login2', 'indexController@authendatabase');
+
+Route::get('register', function(){
+				return View::make('register');
+			});
+
+Route::post('signup', 'indexController@signup');
+
+
+Route::get('signout','indexController@signout');
+
+Route::get('province/{province}','HotelController@gethotelname');
+
+/*Route::get('มารวย',function(){
+				return View::make('มารวย');
+			});*/
+
+Route::get('standard_room_มารวย_ไทย',function(){
+				return View::make('standard_room_มารวย_ไทย');
+			});
+
+Route::get('addnewhotel',function(){
+				return View::make('registerhotel');
+			});
+
+Route::get('addnewroom',function(){
+				return View::make('registerroom');
+			});
+
+Route::post('addRoom','RoomController@addRoom');
+
+Route::post('addHotel','HotelController@addHotel');
+
+Route::get('hotel','HotelController@getpagehotel');
+
+Route::get('room','RoomController@getpageroom');
+
+Route::post('bookroom','RoomController@bookRoom');
+
+Route::post('addcomment','HotelController@addComment');
+
+Route::get('editprofile',function(){
+				return View::make('editprofile');
+			});
+Route::post('editprofile','indexController@editUser');
+
+Route::get('history',function(){
+				return View::make('history');
+			});
+Route::post('cancelRoom','RoomController@cancelBook');
+
+Route::get('userdetail',function(){
+				return View::make('userdetail');
+			});
+?>

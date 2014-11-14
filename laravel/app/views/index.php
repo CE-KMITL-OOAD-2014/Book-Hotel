@@ -28,23 +28,57 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Book Hotel</a>
+      <a class="navbar-brand" href="/">Book Hotel</a>
     </div>
     <div class="collapse navbar-collapse">
       
       <ul class="nav navbar-nav navbar-right">
-		<li><a href="index.html">English</a></li>
-		<li><a href="indexไทย.html">ภาษาไทย</a></li>
         <li class="active"><a href="login2"><span class="glyphicon glyphicon-user"></span> Sign in or Sign Up </a> </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </div>
 
-  <div class="text-center">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+ <div class="col-md-8 col-md-offset-3">
+<div class ="text-center">
+<div class="row-center">
+  <div class="col-sm-3 col-md-3">
+    <div class="thumbnail">
+      <img src="img/20130226114733.jpg" alt="..."/>
+      <div class="caption">
+        <h3>อุทยานแห่งชาติดอยอินทนนท์</h3>
+        <p>จ.เชียงใหม่</p>
+      
+      </div>
+    </div>
   </div>
+</div>
+
+<div class="row-center">
+  <div class="col-sm-3 col-md-3">
+    <div class="thumbnail">
+      <img src="img/phukradung1.jpg" alt="...">
+      <div class="caption">
+        <h3>อุทยานแห่งชาติภูกระดึง</h3>
+        <p>อ.ภูกระดึง จ.เลย</p>
+      
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row-center">
+  <div class="col-sm-3 col-md-3">
+    <div class="thumbnail">
+      <img src="img/PhuRua-1024x575.jpg" alt="...">
+      <div class="caption">
+        <h3>ทุ่งบัวตองดอยแม่อูคอ</h3>
+        <p>ดอยแม่เหาะ จ.แม่ฮ่องสอน</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
   
 </div><!-- /.container -->
 	<!-- script references -->

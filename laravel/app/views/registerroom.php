@@ -14,7 +14,7 @@
 		<style type="text/css">
 			body {
 				color: purple;
-				background : url(/img/test.jpg) ;
+				background : url(img/test.jpg) ;
 				}
 		</style>
 	</head>
@@ -24,32 +24,35 @@
   <div class="modal-dialog">
   <div class="modal-content">
       <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><a href="index">×<a/></button>
-          <h1 class="text-center">Login</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><a href="index.html">×<a/></button>
+          <h1 class="text-center">Sign up</h1>
       </div>
       <div class="modal-body">
-          <form class="form col-md-12 center-block" action='login2' method="post" >
-            <div class="form-group">
-              <input type="text" class="form-control input-lg" placeholder="Email" name="mail">
+          <form class="form col-md-12 center-block" action = 'addRoom' method = "post" enctype="multipart/form-data">
+			<div class="form-group">
+              <input type="text" class="form-control input-lg" placeholder="Name" name = "name">
+            </div>
+			<div class="form-group">
+              <input type="text" class="form-control input-lg" placeholder="HotelName" name = "hotelname">
+            </div>
+			<div class="form-group">
+              <input type="text" class="form-control input-lg" placeholder="Price" name = "price">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control input-lg" placeholder="Password" name="pass">
+              <input type="text" class="form-control input-lg" placeholder="Status" name = "status">
             </div>
             <div class="form-group">
-              <button class="btn btn-success btn-lg btn-block" type="submit">Sign In</button>
-              </form>
-              </div>
-			  <div class="text-center">
-								<a><h1>or</h1></a>
-				</div>
-				<form class="form col-md-12 center-block" action='register' method = "get">
-              <button class="btn btn-success btn-lg btn-block"><a href="register" type="submit" >Sign Up</a></button>
+              <input type="text" class="form-control input-lg" placeholder="Detail" name = "detail">
+            </div>
+            	<input type="file" name="uploadField" />
+            <div class="form-group">
+              <button class="btn btn-success btn-lg btn-block" type="submit" >Register</button>
+            </div>
           </form>
-          
       </div>
       <div class="modal-footer">
           <div class="col-md-12">
-          <button class="btn" data-dismiss="modal" aria-hidden="true"><a href="index">Cancel</a></button>
+          <button class="btn" data-dismiss="modal" aria-hidden="true"><a href="index.html">Cancel</a></button>
 		  </div>	
       </div>
   </div>
