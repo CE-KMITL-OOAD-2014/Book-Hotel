@@ -14,7 +14,7 @@
       <style type="text/css">
       body {
         color: purple;
-        background : url(img/test.jpg) ;
+        background : url(/img/test.jpg) ;
       }
       </style>
     </head>
@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse">
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><?php echo Auth::user()->name ?></a></li>
+            <li><a href="/userdetail"><?php echo Auth::user()->name ?></a></li>
             <li><a href="/signout" >LogOut</a> </li>
           </ul>
         </div><!--/.nav-collapse -->
