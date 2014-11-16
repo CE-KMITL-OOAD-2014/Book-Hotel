@@ -39,60 +39,60 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
-   <div class="col-md-1 col-md-offset-1 well">
+      <div class="col-md-1 col-md-offset-1 well">
         <li class="nav-header"> <a href="#" data-toggle="collapse" data-target="#userMenu">
         </a>
         <ul class="list-unstyled collapse in" id="userMenu">
-             <li class="active"> <a href="/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
-                <li><a href="history"><i class="glyphicon glyphicon-envelope"></i> History </a></li>
-                <li><a href="editprofile"><i class="glyphicon glyphicon-cog"></i> Edit Profile</a></li>
-                <li><a href="signout"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
-        </ul>
-        </li>
+         <li class="active"> <a href="/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+         <li><a href="history"><i class="glyphicon glyphicon-envelope"></i> History </a></li>
+         <li><a href="editprofile"><i class="glyphicon glyphicon-cog"></i> Edit Profile</a></li>
+         <li><a href="signout"><i class="glyphicon glyphicon-off"></i> Logout</a></li>
+       </ul>
+     </li>
 
 
-      </div>
-      <div class="col-md-15 col-md-offset-4">		
+   </div>
+   <div class="col-md-15 col-md-offset-4">		
+    <div class="container">
+      <div class="col-md-12">
         <div class="container">
-          <div class="col-md-12">
-            <div class="container">
-              <div class="menu row">
-                <div class="product col-sm-6">
-                  <img style = class="img-responsive" src = {{"/roomPicture/".$Room->path}} class="img-rounded" width="400" height="350" border="1">
-                  <hr>
-                  <h2><?php echo $Room->name;?></h2>
-                  <hr>
-                  <h3>ROOM FEATURES</h3>
-                  <p><?php echo $Room->roomDetail; ?></p>
-                  <hr>
-                  <h2 class="text-right"><?php echo $Room->price ; ?>$ /Day</h2> 
-                  <form action="bookroom" method = "post">
-                    <input type="hidden" name="roomID" value= "<?php echo $Room->id ?>" >
-                    Date:
-                    <input type="date" name="bday">
-                    จำนวนวัน(ระหว่าง 1 ถึง 7):
-                    <input type="number" name="quantity" min="1" max="7">
-                    <?php
-                    $hotel = Hotel::find($Room->hotelid);
-                    $hotelemail = $hotel->email;
-                    ?>
-                    <input type="hidden" name="hotelemail" value = <?php echo $hotelemail?>>
-                    <input type="submit" value="จองโรงแรม">
-                  </form>
+          <div class="menu row">
+            <div class="product col-sm-6">
+              <img style = class="img-responsive" src = {{"/roomPicture/".$Room->path}} class="img-rounded" width="400" height="350" border="1">
+              <hr>
+              <h2><?php echo $Room->name;?></h2>
+              <hr>
+              <h3>ROOM FEATURES</h3>
+              <p><?php echo $Room->roomDetail; ?></p>
+              <hr>
+              <h2 class="text-right"><?php echo $Room->price ; ?>$ /Day</h2> 
+              <form action="bookroom" method = "post">
+                <input type="hidden" name="roomID" value= "<?php echo $Room->id ?>" >
+                Date:
+                <input type="date" name="bday">
+                จำนวนวัน(ระหว่าง 1 ถึง 7):
+                <input type="number" name="quantity" min="1" max="7">
+                <?php
+                $hotel = Hotel::find($Room->hotelid);
+                $hotelemail = $hotel->email;
+                ?>
+                <input type="hidden" name="hotelemail" value = <?php echo $hotelemail?>>
+                <input type="submit" value="จองโรงแรม">
+              </form>
 
-                  <hr>
+              <hr>
 
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+</div>
 
-      <!-- script references -->
-      <script src="js/jquery-2.1.1.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-    </body>
-    </html>
+<!-- script references -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

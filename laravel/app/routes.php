@@ -7,8 +7,8 @@ Route::get('/login2', 'indexController@login');
 Route::post('login2', 'indexController@authendatabase');
 
 Route::get('register', function(){
-				return View::make('register');
-			});
+	return View::make('register');
+});
 
 Route::post('signup', 'indexController@signup');
 
@@ -22,16 +22,16 @@ Route::get('province/{province}','HotelController@gethotelname');
 			});*/
 
 Route::get('standard_room_มารวย_ไทย',function(){
-				return View::make('standard_room_มารวย_ไทย');
-			});
+	return View::make('standard_room_มารวย_ไทย');
+});
 
 Route::get('addnewhotel',function(){
-				return View::make('registerhotel');
-			});
+	return View::make('registerhotel');
+});
 
 Route::get('addnewroom',function(){
-				return View::make('registerroom');
-			});
+	return View::make('registerroom');
+});
 
 Route::post('addRoom','RoomController@addRoom');
 
@@ -46,16 +46,16 @@ Route::post('bookroom','RoomController@bookRoom');
 Route::post('addcomment','HotelController@addComment');
 
 Route::get('editprofile',function(){
-				return View::make('editprofile');
-			});
+	return View::make('editprofile');
+});
 Route::post('editprofile','indexController@editUser');
 
 Route::get('history',function(){
-				return View::make('history');
-			});
+	return View::make('history');
+});
 Route::post('cancelRoom','RoomController@cancelBook');
 
 Route::get('userdetail',function(){
-				return View::make('userdetail');
-			});
+	return View::make('userdetail');
+});
 ?>

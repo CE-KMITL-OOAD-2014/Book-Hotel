@@ -62,42 +62,42 @@
       </tr>
     </thead>
     <tbody>
-       <?php
-       $userid = Auth::user()->id;
-       $books = Book::where('userid','like',$userid)->get();
-       $size = count($books);
-       for($i=0;$i<$size;$i++){
-        $bookid = $books[$i]->id;
-        $roomid = $books[$i]->roomid;
-        $startdate = $books[$i]->start;
-        $enddate = $books[$i]->end;
-        $room = Room::find($roomid);
-        $hotelid = $room->hotelid;
-        $hotel = Hotel::find($hotelid);
-        $hotelname = $hotel->name;
-        $roomname = $room->name;
-        echo "<tr><th>";
-        echo "$hotelname";
-        echo "</th>";
+     <?php
+     $userid = Auth::user()->id;
+     $books = Book::where('userid','like',$userid)->get();
+     $size = count($books);
+     for($i=0;$i<$size;$i++){
+      $bookid = $books[$i]->id;
+      $roomid = $books[$i]->roomid;
+      $startdate = $books[$i]->start;
+      $enddate = $books[$i]->end;
+      $room = Room::find($roomid);
+      $hotelid = $room->hotelid;
+      $hotel = Hotel::find($hotelid);
+      $hotelname = $hotel->name;
+      $roomname = $room->name;
+      echo "<tr><th>";
+      echo "$hotelname";
+      echo "</th>";
 
-        echo "<th>";
-        echo "$roomname";
-        echo "</th>";
+      echo "<th>";
+      echo "$roomname";
+      echo "</th>";
 
-        echo "<th>";
-        echo "$startdate";
-        echo "</th>";
+      echo "<th>";
+      echo "$startdate";
+      echo "</th>";
 
-        echo "<th>";
-        echo "$enddate";
-        echo "</th>";
+      echo "<th>";
+      echo "$enddate";
+      echo "</th>";
 
-        echo "<th><form action=cancelRoom method=post>
-        <Input type=hidden name=bookid value=$bookid>
-        <input type=submit value=Cancel
-        </th></tr>";
-      }
-      ?>
+      echo "<th><form action=cancelRoom method=post>
+      <Input type=hidden name=bookid value=$bookid>
+      <input type=submit value=Cancel
+      </th></tr>";
+    }
+    ?>
   </tbody>
 </table>
 

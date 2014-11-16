@@ -115,18 +115,18 @@
     </li>
   </div>
   <div class="col-md-2 col-md-offset-4">
-  <?php
-  $userid = Auth::user()->id;
-  $user = User::find($userid);
-  $username = $user->name;
-  $userlastname = $user->lastname;
-  $useremail = $user->email;
-  $userphone = $user->phone;
-  echo "<br> Name : $username";
-  echo "<br> Last Name : $userlastname";
-  echo "<br> Email : $useremail";
-  echo "<br> Phone : $userphone";
-  ?>
+    <?php
+    $userid = Auth::user()->id;
+    $user = User::find($userid);
+    $username = $user->name;
+    $userlastname = $user->lastname;
+    $useremail = $user->email;
+    $userphone = $user->phone;
+    echo "<br> Name : $username";
+    echo "<br> Last Name : $userlastname";
+    echo "<br> Email : $useremail";
+    echo "<br> Phone : $userphone";
+    ?>
   </div>
   
 </div><!-- /.container -->

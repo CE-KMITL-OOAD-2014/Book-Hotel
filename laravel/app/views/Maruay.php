@@ -131,10 +131,10 @@
    <H3><li><a href="standard_room_มารวย_ไทย"><FONT COLOR = White>Standard Room<FONT COLOR = White></a></li></H3>
    <H3><li><a href="#"><FONT COLOR = White>Superior Suite<FONT COLOR = White></a></li></H3>
    <H3><li><a href="#"><FONT COLOR = White>Deluxe Suite<FONT COLOR = White></a></li></H3>
-  <?php
-  $hotelid = $_GET["ID"];
-  $room = Room::where('hotelid','like',$hotelid)->get();
-  for($i =0;$i<count($room);$i++){
+   <?php
+   $hotelid = $_GET["ID"];
+   $room = Room::where('hotelid','like',$hotelid)->get();
+   for($i =0;$i<count($room);$i++){
     $roomname = $room[$i]->name;
     //$idhotel = $room[$i]->id;
     echo "<br><a href='$roomname'><FONT COLOR = White>";
@@ -144,10 +144,10 @@
   }
   ?>
 
- </div>
+</div>
 
- <!-- script references -->
- <script src="js/jquery-2.1.1.min.js"></script>
- <script src="js/bootstrap.min.js"></script>
+<!-- script references -->
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

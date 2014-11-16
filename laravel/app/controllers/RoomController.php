@@ -40,7 +40,7 @@ class RoomController extends BaseController {
 		}*/
 		//echo $roomidTmp->name;
 		//echo $roomnameTmp[0]->name;
- 		return View::make('room')->with('Room',$roomidTmp);
+		return View::make('room')->with('Room',$roomidTmp);
 	}
 
 	public function bookRoom(){
