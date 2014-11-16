@@ -28,7 +28,7 @@ class RoomController extends BaseController {
 
 	public function getpageroom(){
 		$roomid = $_GET["ID"];
-		$roomidTmp = Room ::find($roomid);
+		$roomidTmp = Room::find($roomid);
 		//$roomnameTmp = Room::where('hotelid','like',$hotelid)->get();
 		/*$tmpHotel = Hotel::find($_GET["province"]);*/
 		//$tmpHotel = Hotel::where('province','like',$province)->get();
@@ -74,9 +74,22 @@ class RoomController extends BaseController {
 			$book = new Book;
 			$book->userid = $userid;
 			$book->roomID = $roomID;
+			$room = Room::find($roomID);
 			$book->start = $date;
 			$book->end = date ("Y-m-d", mktime(0, 0, 0, $adate[1], $adate[2]+$forday, $adate[0]));
+			$todate = $book->end;
 			$book->save();
+
+			$user = User::find($userid);
+			$username = $user->name;
+			$details = "Room : {$room->name}
+			<p>Date : $date to $todate</p>
+			<p>Booked by : $username</p>";
+			Mail::send('emails.emailhotel',array('detail' => $details), function($message)
+			{
+				$message->to(Input::get('hotelemail'))->subject('Notice!');
+			});
+
 			return View::make('success');
 			//return Redirect::to('room')->with('notice','Success');
 		}else{
